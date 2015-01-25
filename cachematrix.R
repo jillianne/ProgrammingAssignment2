@@ -8,11 +8,11 @@ makeCacheMatrix <- function(x = matrix()) {
     m <<- NULL
   }
   get <- function() x
-  setmean <- function(solve) m <<- solve
-  getmean <- function() m
+  setinverse <- function(solve) m <<- solve
+  getinverse <- function() m
   list(set = set, get = get,
-       setmean = setmean,
-       getmean = getmean)
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
 
 #This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
